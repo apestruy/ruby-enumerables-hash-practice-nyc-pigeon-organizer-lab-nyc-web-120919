@@ -12,7 +12,7 @@ x = organized_pigeon.keys
     color_name.each do |bird_name|
       x.each do |item|
         if bird_name === item
-          organized_pigeon[item][:color] << color.to_s
+          pigeon_list[item][:color] << color.to_s
         end 
       end 
     end 
