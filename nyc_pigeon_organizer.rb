@@ -17,9 +17,23 @@ x = pigeon_list.keys
       end 
     end 
   end 
-  
-  
-  
-  
-  
+ data[:gender].each do |gender, sex|
+    sex.each do |bird_name|
+      x.each do |item|
+        if bird_name === item
+          pigeon_list[item][:gender] << gender.to_s
+        end 
+      end 
+    end 
+  end 
+  data[:lives].each do |place, name|
+    name.each do |bird_name|
+      x.each do |item|
+        if bird_name === item
+          pigeon_list[item][:lives] << place
+        end 
+      end 
+    end 
+  end 
+  return pigeon_list
 end 
